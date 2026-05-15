@@ -2,18 +2,18 @@ import Link from 'next/link';
 
 export default function BusinessLineup() {
   return (
-    <section id="business" className="relative z-10 bg-[#fdf6dc] py-24 px-[90px]">
+    <section id="business" className="relative z-10 bg-[#fdf6dc] py-16 md:py-24 px-5 md:px-12 lg:px-[90px]">
       <div className="max-w-[1300px] mx-auto">
-        <div className="grid grid-cols-12 gap-12 items-center">
-          <div className="col-span-6 order-2 md:order-1">
-            <h2 className="text-[36px] font-extrabold text-gray-900 leading-tight mb-2">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
+          <div className="md:col-span-6 md:order-1 order-2">
+            <h2 className="text-[28px] md:text-[36px] font-extrabold text-gray-900 leading-tight mb-2">
               Business Lineup
             </h2>
-            <p className="text-sm text-gray-700 mb-6">ビジネスラインナップ</p>
-            <div className="inline-block bg-fuchsia-600 text-white text-sm font-semibold px-4 py-2 mb-6">
+            <p className="text-sm text-gray-700 mb-5 md:mb-6">ビジネスラインナップ</p>
+            <div className="inline-block bg-fuchsia-600 text-white text-[13px] md:text-sm font-semibold px-4 py-2 mb-5 md:mb-6">
               多様な手段で、出会いを形に
             </div>
-            <p className="text-sm leading-[2] text-gray-700 mb-8">
+            <p className="text-[14px] md:text-sm leading-[2] text-gray-700 mb-8">
               商材や方法にしばられず、つながり方をもっと自由に。<br />
               GIGUUUが届ける、多彩なサービスをご紹介します。
             </p>
@@ -25,11 +25,11 @@ export default function BusinessLineup() {
               <span aria-hidden className="text-base">»</span>
             </Link>
           </div>
-          <div className="col-span-6 order-1 md:order-2 relative">
-            <div className="relative w-[480px] h-[320px] mx-auto">
+          <div className="md:col-span-6 md:order-2 order-1 relative">
+            <div className="relative w-full max-w-[420px] md:max-w-[480px] aspect-[3/2] mx-auto">
               <div
                 aria-hidden
-                className="absolute inset-0 -rotate-6 translate-x-8 translate-y-6 bg-fuchsia-500"
+                className="absolute inset-0 -rotate-6 translate-x-6 translate-y-6 bg-fuchsia-500"
               />
               <div
                 aria-hidden

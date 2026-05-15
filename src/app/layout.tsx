@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description: 'Connect the Dots. 1つの出会いが可能性に繋がる。GIGUUU株式会社の公式サイトです。',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: {

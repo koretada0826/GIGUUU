@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative z-10 bg-white py-12 px-[90px]">
+    <footer className="relative z-10 bg-white py-10 md:py-12 px-5 md:px-12 lg:px-[90px]">
       <div className="max-w-[1300px] mx-auto">
-        <div className="grid grid-cols-12 gap-8 items-start">
-          <div className="col-span-4">
-            <div className="giguuu-logo text-[28px] tracking-[0.08em] text-black mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          <div className="md:col-span-4">
+            <div className="giguuu-logo text-[24px] md:text-[28px] tracking-[0.08em] text-black mb-5 md:mb-6">
               GIGUUU
             </div>
             <div className="flex items-center gap-5 text-gray-800">
@@ -47,7 +47,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <nav className="col-span-8 flex flex-col gap-3 text-sm text-gray-800">
+          <nav className="md:col-span-8 flex flex-col gap-3 text-sm text-gray-800">
             <Link href="/company" className="hover:opacity-70 transition">会社情報</Link>
             <Link href="/business" className="hover:opacity-70 transition">事業紹介</Link>
             <Link href="/policy" className="hover:opacity-70 transition">各種ポリシー</Link>

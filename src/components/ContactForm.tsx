@@ -12,17 +12,17 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="relative z-10 px-[90px] pt-12 pb-20">
+    <section className="relative z-10 px-5 md:px-12 lg:px-[90px] pt-10 md:pt-12 pb-16 md:pb-20">
       <div className="max-w-[760px] mx-auto">
-        <h1 className="text-center text-[36px] font-bold tracking-wider text-gray-900 mb-10">
+        <h1 className="text-center text-[28px] md:text-[36px] font-bold tracking-wider text-gray-900 mb-8 md:mb-10">
           お問い合わせ
         </h1>
         {submitted ? (
-          <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-md p-6 text-center">
+          <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-md p-6 text-center text-sm md:text-base">
             お問い合わせを受け付けました。ありがとうございます。
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
             <Field label="お名前" required>
               <input
                 type="text"
@@ -62,7 +62,7 @@ export default function ContactForm() {
                 onChange={(e) => setAgreed(e.target.checked)}
                 className="h-4 w-4"
               />
-              <label htmlFor="agree" className="text-[14px] text-gray-800">
+              <label htmlFor="agree" className="text-[13px] md:text-[14px] text-gray-800">
                 プライバシーポリシーに同意する
               </label>
             </div>
@@ -93,7 +93,7 @@ function Field({
 }) {
   return (
     <div>
-      <label className="block text-[14px] font-semibold text-gray-900 mb-2">
+      <label className="block text-[13px] md:text-[14px] font-semibold text-gray-900 mb-2">
         {label}
         {required && <span className="text-gray-900">*</span>}
       </label>

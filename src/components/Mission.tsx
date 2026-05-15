@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function Mission() {
   return (
-    <section id="about" className="relative z-10 px-[90px] py-24">
+    <section id="about" className="relative z-10 px-5 md:px-12 lg:px-[90px] py-16 md:py-24">
       <div className="max-w-[1300px] mx-auto">
-        <div className="grid grid-cols-12 gap-12 items-center">
-          <div className="col-span-6 relative">
-            <div className="relative w-[480px] h-[360px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
+          <div className="md:col-span-6 relative">
+            <div className="relative w-full max-w-[420px] md:max-w-[480px] aspect-[4/3] mx-auto">
               <div
                 aria-hidden
                 className="absolute inset-0 -rotate-3 translate-x-6 translate-y-6 bg-yellow-300"
@@ -24,15 +24,15 @@ export default function Mission() {
               </div>
             </div>
           </div>
-          <div className="col-span-6">
-            <h2 className="text-[40px] font-extrabold text-gray-900 leading-tight mb-2">
+          <div className="md:col-span-6">
+            <h2 className="text-[32px] md:text-[40px] font-extrabold text-gray-900 leading-tight mb-2">
               Our Mission
             </h2>
-            <p className="text-sm text-gray-700 mb-6">私たちが描く未来</p>
-            <div className="inline-block bg-fuchsia-600 text-white text-sm font-semibold px-4 py-2 mb-6">
+            <p className="text-sm text-gray-700 mb-5 md:mb-6">私たちが描く未来</p>
+            <div className="inline-block bg-fuchsia-600 text-white text-[13px] md:text-sm font-semibold px-4 py-2 mb-5 md:mb-6">
               人と価値の&ldquo;出会い&rdquo;を、もっと自由に
             </div>
-            <p className="text-sm leading-[2] text-gray-700 mb-8">
+            <p className="text-[14px] md:text-sm leading-[2] text-gray-700 mb-8">
               商材や手段にとらわれず、<br />
               人と人、人と情報、人とチャンスがつながるしくみを、<br />
               私たちはつくっていきます。
