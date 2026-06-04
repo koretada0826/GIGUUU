@@ -8,8 +8,12 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          green: '#16a34a',
-          pink: '#e7268a',
+          green: '#27a844',
+          yellow: '#f5b81e',
+          blue: '#2ba0e0',
+          red: '#e63946',
+          pink: '#e5397f',
+          purple: '#7b3f98',
         },
       },
       fontFamily: {

@@ -24,10 +24,10 @@ export default function CompanyTable() {
           className="rounded-2xl p-6 sm:p-8 md:p-12 shadow-sm"
           style={{
             background:
-              'linear-gradient(135deg, #e9c2ff 0%, #ffc7e0 50%, #ffd9c2 100%)',
+              'linear-gradient(135deg, #bff0d2 0%, #d6f5c9 50%, #eef8c8 100%)',
           }}
         >
-          <dl className="divide-y divide-fuchsia-300/60">
+          <dl className="divide-y divide-green-400/50">
             {rows.map((r) => (
               <div
                 key={r.label}

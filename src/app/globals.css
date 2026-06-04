@@ -20,3 +20,158 @@ html, body {
   font-weight: 900;
   letter-spacing: 0.06em;
 }
+
+/* ===== Decorative animations ===== */
+@keyframes giguuu-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+@keyframes giguuu-float-x {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(10px, -12px) rotate(8deg); }
+}
+@keyframes giguuu-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes giguuu-spin-rev {
+  to { transform: rotate(-360deg); }
+}
+@keyframes giguuu-gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes giguuu-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.7); }
+}
+@keyframes giguuu-fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.anim-float { animation: giguuu-float 5s ease-in-out infinite; }
+.anim-float-slow { animation: giguuu-float 8s ease-in-out infinite; }
+.anim-float-x { animation: giguuu-float-x 7s ease-in-out infinite; }
+.anim-spin-slow { animation: giguuu-spin 22s linear infinite; }
+.anim-spin-slower { animation: giguuu-spin 40s linear infinite; }
+.anim-spin-rev { animation: giguuu-spin-rev 30s linear infinite; }
+.anim-pulse-dot { animation: giguuu-pulse 1.8s ease-in-out infinite; }
+
+/* Animated multicolor underline / gradient text */
+.anim-gradient-bar {
+  background-size: 200% 100%;
+  animation: giguuu-gradient 4s linear infinite alternate;
+}
+
+/* Scroll reveal — pure CSS, no JS (progressive enhancement) */
+@keyframes giguuu-reveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal-scroll { opacity: 1; }
+@supports (animation-timeline: view()) {
+  .reveal-scroll {
+    animation: giguuu-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
+  }
+}
+
+/* ===== Heavy decorative animations ===== */
+@keyframes giguuu-drift {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(26px, -34px) rotate(22deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+@keyframes giguuu-blob {
+  0%, 100% { border-radius: 42% 58% 63% 37% / 42% 42% 58% 58%; transform: translate(0,0) scale(1); }
+  50% { border-radius: 62% 38% 40% 60% / 56% 58% 42% 44%; transform: translate(22px,-18px) scale(1.12); }
+}
+@keyframes giguuu-shimmer-text {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes giguuu-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes giguuu-pop {
+  0% { opacity: 0; transform: scale(0.6) translateY(20px); }
+  70% { transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes giguuu-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(39,168,68,0); }
+  50% { box-shadow: 0 0 30px 4px rgba(39,168,68,0.4); }
+}
+@keyframes giguuu-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.14); }
+}
+@keyframes giguuu-bounce-down {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(9px); opacity: 0.4; }
+}
+@keyframes giguuu-rise {
+  from { opacity: 0; transform: translateY(38px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes giguuu-sheen {
+  0% { transform: translateX(-120%) skewX(-18deg); }
+  60%, 100% { transform: translateX(220%) skewX(-18deg); }
+}
+
+.anim-drift { animation: giguuu-drift 13s ease-in-out infinite; }
+.anim-drift-slow { animation: giguuu-drift 20s ease-in-out infinite; }
+.anim-blob { animation: giguuu-blob 16s ease-in-out infinite; }
+.anim-zoom-slow { animation: giguuu-zoom 16s ease-in-out infinite alternate; }
+.anim-glow { animation: giguuu-glow 2.8s ease-in-out infinite; }
+.anim-bounce-down { animation: giguuu-bounce-down 1.7s ease-in-out infinite; }
+.anim-rise { animation: giguuu-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+.text-shimmer {
+  background: linear-gradient(90deg, #27a844, #f5b81e, #2ba0e0, #e5397f, #27a844);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: giguuu-shimmer-text 4s linear infinite;
+}
+.marquee-track {
+  display: inline-flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: giguuu-marquee 24s linear infinite;
+}
+.marquee-rev .marquee-track { animation-direction: reverse; }
+.sheen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  animation: giguuu-sheen 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-drift, .anim-drift-slow, .anim-blob, .anim-zoom-slow,
+  .anim-glow, .anim-bounce-down, .anim-rise, .text-shimmer,
+  .marquee-track { animation: none; }
+  .sheen::after { animation: none; display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-float, .anim-float-slow, .anim-float-x,
+  .anim-spin-slow, .anim-spin-slower, .anim-spin-rev,
+  .anim-pulse-dot, .anim-gradient-bar { animation: none; }
+  .reveal-scroll { animation: none; opacity: 1; transform: none; }
+}

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const navItems = [
+  { href: '/about', label: 'GIGUUUとは' },
   { href: '/company', label: '会社情報' },
   { href: '/business', label: '事業紹介' },
   { href: '/policy', label: '各種ポリシー' },
@@ -10,11 +11,12 @@ export default function Header() {
   return (
     <header className="relative z-30 w-full px-5 md:px-12 lg:px-[90px] pt-6 md:pt-8 pb-4">
       <div className="flex items-center justify-between">
-        <Link
-          href="/"
-          className="giguuu-logo text-[22px] md:text-[26px] lg:text-[28px] tracking-[0.08em] text-black"
-        >
-          GIGUUU
+        <Link href="/" aria-label="GIGUUU トップへ" className="inline-flex items-center">
+          <img
+            src="/giguuu-logo.png"
+            alt="GIGUUU"
+            className="h-12 md:h-14 lg:h-[60px] w-auto"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm text-gray-800">
