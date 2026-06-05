@@ -25,7 +25,8 @@ export default function TelemoCostComparison() {
           リスクゼロの営業力を。
         </h2>
 
-        <div className="mt-12 md:mt-16 overflow-hidden border border-gray-200 bg-white">
+        <div className="mt-12 md:mt-16 overflow-x-auto">
+          <div className="min-w-[560px] overflow-hidden border border-gray-200 bg-white">
           <div className="grid grid-cols-3 text-center">
             <div className="bg-gray-50 py-5 px-2 text-[12px] md:text-[14px] font-bold text-gray-400">ITEM</div>
             <div className="bg-gray-100 py-5 px-2">
@@ -47,6 +48,7 @@ export default function TelemoCostComparison() {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>
