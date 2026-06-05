@@ -1,9 +1,19 @@
 import Link from 'next/link';
 
-const navItems = [
+const navItems: Array<{ href: string; label: React.ReactNode }> = [
   { href: '/about', label: 'GIGUUUとは' },
   { href: '/company', label: '会社情報' },
-  { href: '/business', label: '事業紹介' },
+  {
+    href: '/business',
+    label: (
+      <span className="inline-flex flex-col items-center leading-[1.2]">
+        <span>SaaS営業支援</span>
+        <span className="font-display font-bold text-[10px] tracking-[0.12em] text-brand-green">
+          TELEMO
+        </span>
+      </span>
+    ),
+  },
   { href: '/policy', label: '各種ポリシー' },
 ];
 

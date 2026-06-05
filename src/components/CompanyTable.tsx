@@ -1,7 +1,7 @@
 const rows: Array<{ label: string; value: React.ReactNode }> = [
   { label: '会社名', value: 'GIGUUU株式会社' },
   { label: '設立', value: '2021年12月' },
-  { label: '代表者', value: '青木　瑠美' },
+  { label: '代表者', value: '青木　一平' },
   { label: '所在地', value: '東京都豊島区東池袋1-34-5' },
   { label: '連絡先', value: '03-4366-1687' },
   {
